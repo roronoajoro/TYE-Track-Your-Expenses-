@@ -1,0 +1,44 @@
+# ============================================================
+# TYE (Track Your Expenses) — Backend Requirements
+# ============================================================
+# Install with:   pip install -r requirements.txt
+# ============================================================
+
+# --- Web Framework ---
+fastapi==0.115.12
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20   # for file uploads (OCR receipts)
+
+# --- Database ---
+SQLAlchemy==2.0.46
+psycopg2-binary==2.9.11    # PostgreSQL driver
+
+# --- Auth ---
+google-auth==2.38.0
+google-auth-httplib2==0.2.0
+
+# --- Google Cloud Vision (OCR) ---
+google-cloud-vision==3.10.1
+
+# --- Data Validation ---
+pydantic==2.12.5
+pydantic-settings==2.9.1
+
+# --- NLP / Receipt Parsing ---
+# spaCy 3.8 has no Python 3.13 Windows wheels (triggers source build → GCC error).
+# spaCy 3.7.x is the latest release with pre-built wheels for Python up to 3.12.
+# Python 3.13 wheels are available starting from spaCy 3.8.3+.
+spacy==3.8.11
+numpy>=1.26.0,<3.0.0        # ensure a pre-built wheel is used, no source build
+# After install, download the English model:
+#   python -m spacy download en_core_web_sm
+
+# --- Other utilities ---
+python-dotenv==1.2.1
+Pillow==11.3.0              # image handling for OCR uploads
+requests==2.32.5
+
+# --- Testing ---
+pytest==9.0.2
+pytest-cov==7.0.0
+httpx==0.28.1               # required by FastAPI TestClient
