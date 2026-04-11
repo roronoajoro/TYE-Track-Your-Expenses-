@@ -1,0 +1,55 @@
+# =============================================================
+# TYE — Track Your Expenses  |  .gitignore
+# =============================================================
+
+# ── Secrets & environment ─────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Python ────────────────────────────────────────────────────
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Python test / coverage ────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+*.db
+*.sqlite3
+
+# ── Google credentials & API keys ─────────────────────────────
+google_credentials/
+*.json
+!package.json
+!package-lock.json
+!eslint.config.js
+!tsconfig*.json
+!vite.config.js
+
+# ── Node / Frontend ───────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/coverage/
+
+# ── Uploaded receipt images (user data, not source code) ──────
+backend/app/uploads/
+
+# ── IDE & OS ──────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.DS_Store
+Thumbs.db
+desktop.ini
