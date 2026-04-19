@@ -1,0 +1,27 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#030c23;--bg2:#0f0f1a;
+  --surface:#061d44;--surface2:#0a2a5e;--surface3:#003860;
+  --gold:#e8b84b;--gold2:#d4a43d;--gold3:#c49030;
+  --gold-dim:rgba(232,184,75,.12);--gold-glow:rgba(232,184,75,.25);
+  --violet:#7c6af7;--violet-dim:rgba(124,106,247,.12);
+  --teal:#2dd4bf;--teal-dim:rgba(45,212,191,.1);
+  --white:#ffffff;--white2:rgba(255,255,255,.8);--white3:rgba(255,255,255,.5);
+  --white4:rgba(255,255,255,.2);--white5:rgba(255,255,255,.06);
+  --border:rgba(255,255,255,.08);--border2:rgba(232,184,75,.2);
+  --red:#ff6b6b;--red-dim:rgba(255,107,107,.1);--green:#4ade80;
+  --fd:sans-serif;--fb:sans-serif;--fm:'Courier New',monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:sans-serif;background:var(--bg);color:var(--white2);overflow-x:hidden}
+button{cursor:pointer;font-family:sans-serif;border:none;outline:none}
+a{text-decoration:none}
+::selection{background:var(--gold-glow);color:var(--gold)}
+
+#bgCanvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.6}
+
+.anim{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
+.anim.visible{opacity:1;transform:none}
+.anim-d1{transition-delay:.1s}
+.anim-d2{transition-delay:.2s}
+.anim-d3{transition-delay:.3s}
